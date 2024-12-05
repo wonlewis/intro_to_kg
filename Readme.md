@@ -244,3 +244,11 @@ We can see that the graph is still really confusing, with many documents to go t
 ## Conclusion
 
 You can see how easy it is to set up a Knowledge Graph on your own local computer, without even needing to connect to the internet. 
+
+## Postscript
+
+To import the `harry_potter.graphml` file into Neo4J, copy the graphml file into neo4j `/import` folder, and run the following on the Neo4J browser:
+
+```
+CALL apoc.import.graphml("harry_potter.graphml", {readLabels: true})
+```
